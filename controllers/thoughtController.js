@@ -62,7 +62,7 @@ module.exports = {
       res.status(500).json(err);
     }
   },
-  async deleteThouhgt(req, res) {
+  async deleteThought(req, res) {
     try {
       const thought = await Thought.findOneAndRemove({ _id: req.params.thoughtId });
 
