@@ -1,0 +1,19 @@
+{
+    "name": "friendly-focus",
+    "version": "1.0.1",
+    "description": "Social media networking app",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index",
+      "dev": "nodemon index",
+      "seed": "node utils/seed.js"
+    },
+    "dependencies": {
+      "express": "^4.17.1",
+      "mongoose": "^8.0.0"
+    },
+    "devDependencies": {
+      "nodemon": "^2.0.9"
+    }
+  }
+  
