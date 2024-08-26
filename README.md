@@ -1,7 +1,7 @@
 # friendly-Focus
 
 ## Desciption
-This app was created as a the server side of a social media platform. The goal of this application is to be able to create a user. The users can post thoughts and react on their friends thoughts. This app uses MongoDB and CRUD operations to create,post,sort,update and delete the users, thoughts, and reactions! Hopefully in the future this app can be converted into a user interactable interface! As of right now this application is now deployed.
+This app was created as a the server side of a social media platform. The goal of this application is to be able to create a user. The users can post thoughts and react on their friends thoughts. This app uses MongoDB and CRUD operations to create,post,sort,update and delete the users, thoughts, and reactions! Hopefully in the future this app can be converted into a user interactable interface! As of right now this application is not deployed.
 
 ## Credits
 Here are some resources I used to help me!
