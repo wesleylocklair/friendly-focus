@@ -4,13 +4,17 @@ const reactionSchema = require('./Reaction');
 // Schema to create Post model
 const thoughtSchema = new Schema(
   {
-    title: {
-      type: String
-    },
-    description: {
+    thoughtText: {
       type: String,
-      minLength: 8,
-      maxLength: 500,
+      required: true,
+    },
+    createdAt: {
+      type: Date,
+      default: Date.now(),
+    },
+    username: {
+      type: String,
+    
     },
     reactions: [reactionSchema],
   },

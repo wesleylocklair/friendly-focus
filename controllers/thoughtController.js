@@ -11,7 +11,7 @@ module.exports = {
   },
   async getSingleThought(req, res) {
     try {
-      const thought = await Thoguht.findOne({ _id: req.params.thoughtId })
+      const thought = await Thought.findOne({ _id: req.params.thoughtId })
 
       if (!thought) {
         return res.status(404).json({ message: 'No thought with that ID' });
@@ -22,7 +22,7 @@ module.exports = {
       res.status(500).json(err);
     }
   },
-  // create a new video
+  // create a new thought
   async createThought(req, res) {
     try {
       const thought = await Thought.create(req.body);
@@ -64,23 +64,13 @@ module.exports = {
   },
   async deleteThought(req, res) {
     try {
-      const thought = await Thought.findOneAndRemove({ _id: req.params.thoughtId });
+      const thought = await Thought.findOneAndDelete({ _id: req.params.thoughtId });
 
       if (!thought) {
         return res.status(404).json({ message: 'No thought with this id!' });
       }
 
-      const user = await User.findOneAndUpdate(
-        { thoughts: req.params.thoughtId },
-        { $pull: { thoughts: req.params.thoughtId } },
-        { new: true }
-      );
-
-      if (!user) {
-        return res
-          .status(404)
-          .json({ message: 'Thought deleted but no user with this id!' });
-      }
+     
 
       res.json({ message: 'Thought successfully deleted!' });
     } catch (err) {
